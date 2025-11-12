@@ -12,7 +12,8 @@ import contactRoutes from "./routes/contactRoutes.js";
 import servicesRoutes from "./routes/servicesRoute.js";
 import galleryRoutes from "./routes/galleryRoute.js";
 import featuresRoutes from "./routes/featuresRoute.js";
-
+import careerRoutes from "./routes/careerRoute.js";
+import jobRoutes from "./routes/jobRoute.js";
 
 
 dotenv.config();
@@ -51,8 +52,8 @@ app.use('/api/contact', contactRoutes) ;
 app.use("/api/services", servicesRoutes );
 app.use("/api/gallery", galleryRoutes );
 app.use("/api/features", featuresRoutes );
-
-
+app.use("/api/careers", careerRoutes);
+app.use("/api/jobs", jobRoutes);
 
 app.get("/", (req, res) => {
   res.send("Construction Website Backend Running ✅");
