@@ -9,7 +9,7 @@ const router = express.Router();
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-router.get("/all",adminOnly, getApplications);
+router.get("/all",protect,adminOnly, getApplications);
 router.post("/apply", upload.single("resume"), applyJob);
 router.delete("/:id",protect,adminOnly, deleteApplication);
 
