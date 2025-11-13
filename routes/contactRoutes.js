@@ -15,7 +15,7 @@ router.post("/submit", submitInquiry);
 
 //  Admin - Get all inquiries
 
-router.get("/", protect, adminOnly, getInquiries);
+router.get("/", adminOnly, getInquiries);
 
 //  Admin - Update inquiry status (Pending/Seen/Replied)
 
